@@ -13,44 +13,63 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         header {
             background-color: #000;
             padding-top: 1px;
-			padding-bottom: 1px;
+            padding-bottom: 1px;
             text-align: center;
             color: #ffffff;
         }
-
-        section {
+        .main-container {
             display: flex;
+            flex-wrap: nowrap;
             padding: 10px;
         }
-
-        nav {
+        .timers {
             width: 20%;
             padding-right: 20px;
-            /* border-right: 1px solid #555555; */
         }
-
         .countdown-box {
-			background-color: #333;
+            background-color: #333;
             border: 1px solid #555555;
             padding: 15px;
             text-align: center;
             margin-bottom: 20px;
         }
-
-        section > div {
-            flex: 1;
+        .content-left, .content-right {
+            width: 40%; /* Adjusted for two columns */
+            display: flex;
+            flex-direction: column;
         }
-
-        section p {
-            font-size: 18px;
-            line-height: 1.6;
+        .table-container {
+            width: 100%; /* Tables will fill the div */
+            margin-bottom: 30px; /* Spacing between tables */
         }
-
-        footer {
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            border: 1px solid #000;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #121111;
+            color: #fff;
+            border-style: 1px solid;
+        }
+        tr:nth-child(even) {
+            background-color: #333;
+        }
+        a {
+            color: #ff7f00; /* Link color */
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ffbf80; /* Link color on hover */
+        }
+		footer {
             background-color: #333333;
             padding: 0px;
             text-align: center;
@@ -59,237 +78,141 @@
             width: 100%;
             color: #ffffff;
         }
-		
-				table {
-		  width: 100%;
-		  border-collapse: collapse;
-		}
-
-		th,
-		td {
-		  padding: 10px;
-		  text-align: left;
-		  border-bottom: 1px solid #555;
-		}
-
-		th {
-		  background-color: #222;
-		  color: #fff;
-		}
-		tr {
-			height:40px;
-		}
-
-		tr:nth-child(even) {
-		  background-color: #333;
-		}
-
-		tr:hover {
-		  background-color: #444;
-		}
-
-		td a {
-		  color: #ff7f00; /* Link color */
-		  text-decoration: none;
-		}
-
-		td a:hover {
-		  color: #ffbf80; /* Link color on hover */
-		}
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Wayfinder Resources</h1>
-    </header>
+<header>
+    <h1>Wayfinder Resources</h1>
+</header>
 
-    <section>
-        <nav>
-			<p style="text-align: center; font-weight: bold;">Timers</p>
-            <div class="countdown-box">
-                <h2>Talon of Pyre</h2>
-                <div id="countdown-talon-of-pyre"></div>
-            </div>
-
-            <div class="countdown-box">
-                <h2>Daily Reset</h2>
-                <div id="countdown-daily-reset"></div>
-            </div>
-        </nav>
-
-        <div>
-			<table>
-				<tr height="60">
-					<th>Resources</th>
-					<th></th>
-				</tr>
-				<tr>
-					<td>Materials Cheat Sheet (Ganek)</td>
-					<td><a href="https://imgur.com/hz59tuv" target="_blank">https://imgur.com/hz59tuv</a></td>
-				</tr>					
-				<tr>
-					<td>Wayfinder Guides (Kep/IIOII)</td>
-					<td><a href="https://thegloom.ghost.io/" target="_blank">https://thegloom.ghost.io/</a></td>
-				</tr>
-				<tr>
-					<td>Bunny Hop Guide (Atlantis)</td>
-					<td><a href="https://www.youtube.com/watch?v=SoOT2F5VcT8" target="_blank">https://www.youtube.com/watch?v=SoOT2F5VcT8</a></td>
-				</tr>
-
-
-				<tr>
-					<td>WayfinderDB</td>
-					<td><a href="https://wayfinderdb.com/" target="_blank">https://wayfinderdb.com/</a></td>
-				</tr>
-				<tr>
-					<td>Wiki (Official)</td>
-					<td><a href="https://wayfinder.atma.gg/en/Wayfinder_Wiki" target="_blank">https://wayfinder.atma.gg/en/Wayfinder_Wiki</a></td>
-				</tr>
-				<tr>
-					<td>GloomNews</td>
-					<td><a href="https://gloomnews.com/" target="_blank">https://gloomnews.com/</a></td>
-				</tr>
-
-			
-				<!--
-				<tr height="40">
-					<th><br /><br />Spreadsheets</th>
-					<th></th>
-				</tr>
-				<tr>
-					<td>KepKep Sheet 2.0 (by KepKep)</td>
-					<td><a href="https://docs.google.com/spreadsheets/d/1rVhPPbYUqQUpLss2b3qkQUbN7Vh7xTVyVg9JjPQTW04/edit#gid=0" target="_blank">Link</a></td>
-				</tr>
-				<tr>
-					<td>Project Wayfinder (by <TBG>Drakhan)</td>
-					<td><a href="https://docs.google.com/spreadsheets/d/1WW_AeeIcZyZr-ZOLYI-xxsxM0bsuktmXeGkPeUPJf9c/edit#gid=405902017" target="_blank">Link</a></td>
-				</tr>
-				<tr>
-					<td>Wayfinder Awakening Sheet (by ItsMrBub)</td>
-					<td><a href="https://docs.google.com/spreadsheets/d/1NQClJx-9oBU_9bbRCcp8WAGIZgHd8AcSOeTUv5z5rxE/" target="_blank">Link</a></td>
-				</tr>				
-				-->
-
-				
-				<tr height="40">
-					<th><br /><br /><br />Community Streams</th>
-					<th></th>
-				</tr>
-				<tr>
-					<td>Gloom_Guy</td>
-					<td><a href="https://www.twitch.tv/gloom_guy" target="_blank">https://www.twitch.tv/gloom_guy</a></td>
-				</tr>
-				<tr>
-					<td>All Streams</td>
-					<td><a href="https://www.twitch.tv/directory/category/wayfinder" target="_blank">https://www.twitch.tv/directory/category/wayfinder</a></td>
-				</tr>
-				<tr>
-					<td>Official</td>
-					<td><a href="https://www.twitch.tv/playwayfinder" target="_blank">https://www.twitch.tv/playwayfinder</a></td>
-				</tr>	
-				
-
-				<!--
-				<tr>
-					<td>Datamine</td>
-					<td><a href="https://twitter.com/LeaksWayfinder" target="_blank">https://twitter.com/LeaksWayfinder</a></td>
-				</tr>	
-				-->
-				
-
-				
-				
-				<tr height="60">
-					<th><br /><br /><br />Official</th>
-					<th></th>
-				</tr>
-				<tr>
-					<td>Discord</td>
-					<td><a href="https://discord.com/invite/wayfinder" target="_blank">https://discord.com/invite/wayfinder</a></td>
-				</tr>	
-				<tr>
-					<td>Roadmap</td>
-					<td><a href="https://trello.com/b/RgnuBh4m/wayfinder-roadmap" target="_blank">https://trello.com/b/RgnuBh4m/wayfinder-roadmap</a></td>
-				</tr>				
-				<tr>
-					<td>Home</td>
-					<td><a href="https://www.playwayfinder.com/en" target="_blank">https://www.playwayfinder.com/en</a></td>
-				</tr>
-
-				<tr>
-					<td>Bugs/Features</td>
-					<td><a href="https://wayfinder.featureupvote.com/" target="_blank">https://wayfinder.featureupvote.com/</a></td>
-				</tr>
-				<tr>
-					<td>Support</td>
-					<td><a href="https://playwayfinder.zendesk.com/" target="_blank">https://playwayfinder.zendesk.com/</a></td>
-				</tr>
-				<tr>
-					<td>Reddit</td>
-					<td><a href="https://www.reddit.com/r/PlayWayfinder/" target="_blank">https://www.reddit.com/r/PlayWayfinder/</a></td>
-				</tr>
-		
-				<tr>
-					<td>Twitter</td>
-					<td><a href="https://twitter.com/playwayfinder" target="_blank">https://twitter.com/playwayfinder</a></td>
-				</tr>
-				<tr>
-					<td>Youtube</td>
-					<td><a href="https://www.youtube.com/@playwayfinder" target="_blank">https://www.youtube.com/@playwayfinder</a></td>
-				</tr>				
-			</table>
+<div class="main-container">
+	<!-- TIMERS -->
+    <div class="timers">
+        <p style="text-align: center; font-weight: bold;">Timers</p>
+        <div class="countdown-box">
+            <h2>Talon of Pyre</h2>
+            <div id="countdown-talon-of-pyre"></div>
         </div>
-    </section>
 
-	<!--
-    <footer>
-        <p>Last Update March 16th, 2024 - emilios</p>
-    </footer>
-	-->
-	
-    <script>
-        // JavaScript function for the countdown timer
-        function updateCountdown() {
-            const now = new Date();
-            const currentHour = now.getUTCHours();
-            
-            // Countdown: Talon of Pyre
-            const targetTime1 = new Date();
-            targetTime1.setUTCHours(currentHour + (currentHour % 2 === 0 ? 2 : 1), 0, 0, 0);
+        <div class="countdown-box">
+            <h2>Daily Reset</h2>
+            <div id="countdown-daily-reset"></div>
+        </div>
+    </div>
 
-            // Countdown: Daily Reset
-            const targetTime2 = new Date();
-            targetTime2.setUTCHours(0, 0, 0, 0);
-            targetTime2.setUTCDate(targetTime2.getUTCDate() + 1);
+    
+	<!-- LEFT -->
+	<div class="content-left">
+        <!-- Cheat Sheets -->
+        <div class="table-container">
+            <table>
+                <tr><th>Cheat Sheets</th><th></th></tr>
+                <tr><td>Material Farming (Ganek)</a></td><td><a href="https://imgur.com/hz59tuv" target="_blank">https://imgur.com/hz59tuv</a></td></tr>
+                <tr><td>Artifacts (IIOII)</td><td><a href="https://imgur.com/a/suNn3Z8" target="_blank">https://imgur.com/a/suNn3Z8</a></td></tr>
+                <tr><td>Chalice Buffs (Sorrow)</td><td><a href="https://imgur.com/a/xTFTOdN" target="_blank">https://imgur.com/a/xTFTOdN</a></td></tr>
+            </table>
+        </div>
 
-            updateSingleCountdown(targetTime1, 'countdown-talon-of-pyre');
-            updateSingleCountdown(targetTime2, 'countdown-daily-reset');
-        }
+        <!-- Guides -->
+        <div class="table-container">
+            <table>
+                <tr><th>Guides</th><th></th></tr>
+                <tr><td>Wayfinder Guides (Kep/IIOII)</td><td><a href="https://thegloom.ghost.io/" target="_blank">https://thegloom.ghost.io/</a></td></tr>
+                <tr><td>Bunny Hop Guide (Atlantis)</td><td><a href="https://www.youtube.com/watch?v=SoOT2F5VcT8" target="_blank">https://www.youtube.com/watch?v=SoOT2F5VcT8</a></td></tr>
+            </table>
+        </div>
+		
+        <!-- Resources -->
+        <div class="table-container">
+            <table>
+                <tr><th>Resources</th><th></th></tr>
+                <tr><td>WayfinderDB</td><td><a href="https://wayfinderdb.com/" target="_blank">https://wayfinderdb.com/</a></td></tr>
+                <tr><td>Wiki (Official)</td><td><a href="https://wayfinder.atma.gg/en/Wayfinder_Wiki" target="_blank">https://wayfinder.atma.gg/en/Wayfinder_Wiki</a></td></tr>
+                <tr><td>GloomNews</td><td><a href="https://gloomnews.com/" target="_blank">https://gloomnews.com/</a></td></tr>
+            </table>
+        </div>
+    </div>
 
-        // Update a single countdown
-        function updateSingleCountdown(targetTime, elementId) {
-            const now = new Date();
+	<!-- RIGHT -->
+    <div class="content-right">
+        <!-- Community Streams -->
+        <div class="table-container">
+            <table>
+                <tr><th>Community Streams</th><th></th></tr>
+                <tr><td>Gloom_Guy</td><td><a href="https://www.twitch.tv/gloom_guy" target="_blank">https://www.twitch.tv/gloom_guy</a></td></tr>
+                <tr><td>All Streams</td><td><a href="https://www.twitch.tv/directory/category/wayfinder" target="_blank">https://www.twitch.tv/directory/category/wayfinder</a></td></tr>
+                <tr><td>Official</td><td><a href="https://www.twitch.tv/playwayfinder" target="_blank">https://www.twitch.tv/playwayfinder</a></td></tr>
+            </table>
+        </div>
+		
+		<!-- Official -->
+		<div class="table-container">
+			<table>
+				<tr><th>Official Resources</th><th></th></tr>
+				<tr><td>Discord</td><td><a href="https://discord.com/invite/wayfinder" target="_blank">https://discord.com/invite/wayfinder</a></td></tr>	
+				<tr><td>Roadmap</td><td><a href="https://trello.com/b/RgnuBh4m/wayfinder-roadmap" target="_blank">https://trello.com/b/RgnuBh4m/wayfinder-roadmap</a></td></tr>				
+				<tr><td>Bugs/Features</td><td><a href="https://wayfinder.featureupvote.com/" target="_blank">https://wayfinder.featureupvote.com/</a></td></tr>
+				<tr><td>Support</td><td><a href="https://playwayfinder.zendesk.com/" target="_blank">https://playwayfinder.zendesk.com/</a></td></tr>
+			</table>
+		</div>
+		<div class="table-container">
+			<table>
+				<tr><th>Official Media</th><th></th></tr>
+				<tr><td>Wayfinder Home</td><td><a href="https://www.playwayfinder.com/en" target="_blank">https://www.playwayfinder.com/en</a></td></tr>
+				<tr><td>Airship Syndicate Home</td><td><a href="https://www.playwayfinder.com/en" target="_blank">https://www.airshipsyndicate.com/</a></td></tr>
+				<tr><td>Reddit</td><td><a href="https://www.reddit.com/r/PlayWayfinder/" target="_blank">https://www.reddit.com/r/PlayWayfinder/</a></td></tr>
+				<tr><td>Twitter</td><td><a href="https://twitter.com/playwayfinder" target="_blank">https://twitter.com/playwayfinder</a></td></tr>
+				<tr><td>Youtube</td><td><a href="https://www.youtube.com/@playwayfinder" target="_blank">https://www.youtube.com/@playwayfinder</a></td></tr>
+			</table>
+		</div>
+    </div>
+</div>
 
-            // Calculate the remaining time until the target time
-            const remainingMilliseconds = targetTime - now;
-            const remainingSeconds = Math.floor(remainingMilliseconds / 1000);
+<!--<footer><p>Last Update March 16th, 2024 - emilios</p></footer>-->
 
-            // Calculate the time components
-            const hours = Math.floor(remainingSeconds / 3600);
-            const minutes = Math.floor((remainingSeconds % 3600) / 60);
-            const seconds = remainingSeconds % 60;
+<script>
+	// TIMER:
+	function updateCountdown() {
+		const now = new Date();
+		const currentHour = now.getUTCHours();
+		
+		// Countdown: Talon of Pyre
+		const targetTime1 = new Date();
+		targetTime1.setUTCHours(currentHour + (currentHour % 2 === 0 ? 2 : 1), 0, 0, 0);
 
-            // Display the countdown
-            document.getElementById(elementId).innerHTML = `${hours}h ${minutes}m ${seconds}s`;
-        }
+		// Countdown: Daily Reset
+		const targetTime2 = new Date();
+		targetTime2.setUTCHours(0, 0, 0, 0);
+		targetTime2.setUTCDate(targetTime2.getUTCDate() + 1);
 
-        // Update the countdown every second
-        setInterval(updateCountdown, 1000);
+		updateSingleCountdown(targetTime1, 'countdown-talon-of-pyre');
+		updateSingleCountdown(targetTime2, 'countdown-daily-reset');
+	}
 
-        // Initial update
-        updateCountdown();
-    </script>
+	// Update a single countdown
+	function updateSingleCountdown(targetTime, elementId) {
+		const now = new Date();
+
+		// Calculate the remaining time until the target time
+		const remainingMilliseconds = targetTime - now;
+		const remainingSeconds = Math.floor(remainingMilliseconds / 1000);
+
+		// Calculate the time components
+		const hours = Math.floor(remainingSeconds / 3600);
+		const minutes = Math.floor((remainingSeconds % 3600) / 60);
+		const seconds = remainingSeconds % 60;
+
+		// Display the countdown
+		document.getElementById(elementId).innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+	}
+
+	// Update the countdown every second
+	setInterval(updateCountdown, 1000);
+
+	// Initial update
+	updateCountdown();
+</script>
 
 </body>
 </html>
