@@ -25,52 +25,48 @@
             flex-wrap: nowrap;
             padding: 10px;
         }
-        .timers {
-            width: 20%;
+        .timers, .content-left, .content-right {
             padding-right: 20px;
         }
         .countdown-box {
             background-color: #333;
-            border: 1px solid #555555;
+            border: 1px solid #555;
             padding: 15px;
             text-align: center;
             margin-bottom: 20px;
         }
         .content-left, .content-right {
-            width: 40%; /* Adjusted for two columns */
+            width: 40%;
             display: flex;
             flex-direction: column;
         }
         .table-container {
-            width: 100%; /* Tables will fill the div */
-            margin-bottom: 30px; /* Spacing between tables */
+            overflow-x: auto;
         }
         table {
-            width: 90%;
+            width: 100%;
             border-collapse: collapse;
             border: 1px solid #000;
         }
         th, td {
             padding: 10px;
-			
             text-align: left;
         }
         th {
             background-color: #121111;
             color: #fff;
-            border-style: 1px solid;
         }
         tr:nth-child(even) {
             background-color: #333;
         }
         a {
-            color: #ff7f00; /* Link color */
+            color: #ff7f00;
             text-decoration: none;
         }
         a:hover {
-            color: #ffbf80; /* Link color on hover */
+            color: #ffbf80;
         }
-		footer {
+        footer {
             background-color: #333333;
             padding: 0px;
             text-align: center;
@@ -78,6 +74,18 @@
             bottom: 0;
             width: 100%;
             color: #ffffff;
+        }
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+            }
+            .timers, .content-left, .content-right {
+                width: 100%;
+                padding-right: 0;
+            }
+            table {
+                width: 90%; /* Adjust for small screens if necessary */
+            }
         }
     </style>
 </head>
@@ -114,8 +122,10 @@
                 <tr><td>Chalice Buffs (Sorrow)</td><td><a href="https://imgur.com/a/xTFTOdN" target="_blank">https://imgur.com/a/xTFTOdN</a></td></tr>
             </table>
         </div>
+		
 
         <!-- Guides -->
+		<br />
         <div class="table-container">
             <table>
                 <tr><th>Guides</th><th></th></tr>
@@ -125,6 +135,7 @@
         </div>
 		
         <!-- Resources -->
+		<br />
         <div class="table-container">
             <table>
                 <tr><th>Resources</th><th></th></tr>
@@ -147,7 +158,8 @@
             </table>
         </div>
 		
-		<!-- Official -->
+		<!-- Official Resources -->
+		<br />
 		<div class="table-container">
 			<table>
 				<tr><th>Official Resources</th><th></th></tr>
@@ -157,6 +169,9 @@
 				<tr><td>Support</td><td><a href="https://playwayfinder.zendesk.com/" target="_blank">https://playwayfinder.zendesk.com/</a></td></tr>
 			</table>
 		</div>
+		
+		<!-- Official Resources -->
+		<br />
 		<div class="table-container">
 			<table>
 				<tr><th>Official Media</th><th></th></tr>
@@ -170,7 +185,7 @@
     </div>
 </div>
 
-<!--<footer><p>Last Update March 16th, 2024 - emilios</p></footer>-->
+<!--<footer><p>Last Update March 23th, 2024: Mobile friendly - emilios</p></footer>-->
 
 <script>
 	// TIMER:
